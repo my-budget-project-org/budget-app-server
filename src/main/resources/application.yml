@@ -1,0 +1,18 @@
+# --- 공통 설정 ---
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true

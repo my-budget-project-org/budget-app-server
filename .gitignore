@@ -1,7 +1,4 @@
 # --- 1. 민감한 정보 ---
-application-dev.yml
-application-prod.yml
-application-*.properties
 .env
 .env.*
 *.env
