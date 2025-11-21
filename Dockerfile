@@ -4,7 +4,7 @@ COPY build.gradle.kts settings.gradle.kts ./
 COPY src ./src
 RUN gradle test bootJar --no-daemon
 
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
 
