@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  mysql_db:
+    image: mysql:8.0
+    container_name: budget-db-local
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: budget_db
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql_data_volume:/var/lib/mysql
+
+volumes:
+  mysql_data_volume:
